@@ -70,7 +70,7 @@ public class CharacterMove : MonoBehaviour {
 			
 			
 			// 부드럽게 보간 처리.
-			velocity = Vector3.Lerp(currentVelocity, velocity,Mathf.Min (Time.deltaTime * 5.0f ,1.0f));
+			velocity = Vector3.Lerp(currentVelocity, velocity,Mathf.Min (Time.deltaTime * 10.0f ,1.0f));
 			velocity.y = 0;
 			
 			
