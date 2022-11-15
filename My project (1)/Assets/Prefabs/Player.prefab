@@ -790,7 +790,7 @@ CharacterController:
   m_Height: 2
   m_Radius: 0.5
   m_SlopeLimit: 20
-  m_StepOffset: 0.3
+  m_StepOffset: 0.1
   m_SkinWidth: 0.08
   m_MinMoveDistance: 0
   m_Center: {x: 0, y: 1, z: 0}
@@ -820,6 +820,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   attackRange: 1.5
   hitEffect: {fileID: 1254023096778180308, guid: 587fffbb0a7de884eb32071a67ca9afe, type: 3}
+  deathSeClip: {fileID: 8300000, guid: c783c90664722f944834bf78f41acfa2, type: 3}
 --- !u!114 &1548199403044143985
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -899,6 +900,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9f723b14774789745b73bcca66931b36, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  attackSeClip: {fileID: 8300000, guid: a36b2b7292be69f478fcd95cbe232f6e, type: 3}
 --- !u!1 &4766792893328643402
 GameObject:
   m_ObjectHideFlags: 0
@@ -1529,6 +1531,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4e208d0806edd0b4793a54faf2405c91, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  hitSeClip: {fileID: 0}
 --- !u!1 &7798956614886732565
 GameObject:
   m_ObjectHideFlags: 0

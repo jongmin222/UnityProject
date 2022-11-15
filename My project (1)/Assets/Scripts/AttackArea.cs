@@ -6,9 +6,16 @@ public class AttackArea : MonoBehaviour
 {
 	CharacterStatus status;
 
+	public AudioClip hitSeClip;
+	AudioSource hitSeAudio;
 	void Start()
 	{
 		status = transform.root.GetComponent<CharacterStatus>();
+
+		// 오디오 초기화.
+		hitSeAudio = gameObject.AddComponent<AudioSource>();
+		hitSeAudio.clip = hitSeClip;
+		hitSeAudio.loop = false;
 	}
 
 
@@ -41,6 +48,8 @@ public class AttackArea : MonoBehaviour
 		other.SendMessage("Damage", GetAttackInfo());
 		// 공격한 대상을 저장한다.
 		status.lastAttackTarget = other.transform.root.gameObject;
+		// 오디오 재생.
+		hitSeAudio.Play();
 	}
 
 

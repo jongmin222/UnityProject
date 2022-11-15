@@ -24,6 +24,8 @@ public class PlayerCtrl : MonoBehaviour
     State state = State.Walking;		// 현재 스테이트.
     State nextState = State.Walking;	// 다음 스테이트.
 
+    public AudioClip deathSeClip;
+    AudioSource deathSeAudio;
 
     // Use this for initialization
     void Start()
@@ -35,6 +37,11 @@ public class PlayerCtrl : MonoBehaviour
         targetCursor = FindObjectOfType<TargetCursor>();
         Debug.Log("targetCursor  : " + targetCursor);
         targetCursor.SetPosition(transform.position);
+
+        // 오디오 초기화.
+        deathSeAudio = gameObject.AddComponent<AudioSource>();
+        deathSeAudio.loop = false;
+        deathSeAudio.clip = deathSeClip;
     }
 
     // Update is called once per frame
@@ -144,6 +151,9 @@ public class PlayerCtrl : MonoBehaviour
     {
         status.died = true;
         gameRuleCtrl.GameOver();
+
+        // 오디오 재생.
+        deathSeAudio.Play();
     }
 
     void Damage(AttackArea.AttackInfo attackInfo)

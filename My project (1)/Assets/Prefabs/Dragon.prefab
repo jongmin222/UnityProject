@@ -831,6 +831,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4e208d0806edd0b4793a54faf2405c91, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  hitSeClip: {fileID: 0}
 --- !u!1 &3754496791446901230
 GameObject:
   m_ObjectHideFlags: 0
@@ -1009,6 +1010,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9f723b14774789745b73bcca66931b36, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  attackSeClip: {fileID: 8300000, guid: daa6cfdf6229d024fbf5640ea88afd4e, type: 3}
 --- !u!95 &3908655940569553538
 Animator:
   serializedVersion: 3
@@ -1042,7 +1044,7 @@ CharacterController:
   m_Height: 4
   m_Radius: 1
   m_SlopeLimit: 20
-  m_StepOffset: 0.3
+  m_StepOffset: 0.1
   m_SkinWidth: 0.08
   m_MinMoveDistance: 0
   m_Center: {x: 0, y: 2, z: 0}
@@ -1113,6 +1115,7 @@ MonoBehaviour:
   dropItemPrefab:
   - {fileID: 6475881625581678495, guid: 7c12637dd04080043a11c57b19114b40, type: 3}
   - {fileID: 5454210284191776059, guid: a13b72f11b78854448b519c1d9f183de, type: 3}
+  deathSeClip: {fileID: 8300000, guid: e55f331d427970444adf2467661d0e6a, type: 3}
 --- !u!1 &4115787342587448482
 GameObject:
   m_ObjectHideFlags: 0
@@ -1292,7 +1295,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4780851830604535299}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -6.225754, y: 2.341485, z: 3.4879303}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4528702236190180597}
@@ -1309,7 +1312,7 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 3
+  m_Radius: 5
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &2766883049797852803
 MonoBehaviour:

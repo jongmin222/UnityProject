@@ -33,6 +33,8 @@ public class EnemyCtrl : MonoBehaviour
     State state = State.Walking;        // 현재 스테이트.
     State nextState = State.Walking;    // 다음 스테이트.
 
+    public AudioClip deathSeClip;
+    AudioSource deathSeAudio;
 
     // Use this for initialization
     void Start()
@@ -187,6 +189,9 @@ public class EnemyCtrl : MonoBehaviour
         {
             gameRuleCtrl.GameClear();
         }
+
+        // 오디오 재생.
+        AudioSource.PlayClipAtPoint(deathSeClip, transform.position);
     }
 
     void Damage(AttackArea.AttackInfo attackInfo)

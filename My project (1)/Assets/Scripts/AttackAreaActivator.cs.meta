@@ -3,7 +3,8 @@ guid: 9f723b14774789745b73bcca66931b36
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - attackSeClip: {fileID: 8300000, guid: daa6cfdf6229d024fbf5640ea88afd4e, type: 3}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 
